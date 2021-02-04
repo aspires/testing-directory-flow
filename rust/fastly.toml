@@ -1,0 +1,6 @@
+version = 1
+name = "example"
+description = "Get to know the Fastly Compute@Edge environment with a basic starter that demonstrates routing, simple synthetic responses and overriding caching rules."
+authors = ["austinspires+ecp@gmail.com"]
+language = "rust"
+service_id = "0qbnZU4N8LXMWl9kCdDlxz"

@@ -57,6 +57,55 @@ fn main(mut req: Request<Body>) -> Result<impl ResponseExt, Error> {
             Ok(req.send(OTHER_BACKEND_NAME)?)
         }
 
+        (&Method::GET, path) if path.starts_with("/headers/") => {
+            // Demo adding, editing, and deleting headers
+            
+            // Code examples go here
+            // Suitable for breaking into subpaths (/headers/edit etc)
+        }
+
+        (&Method::GET, path) if path.starts_with("/geoip/") => {
+            // Demo of a simple geoIP function
+            
+            // Code examples go here
+            // link to external resources go here
+        }
+
+        (&Method::GET, path) if path.starts_with("/logging/") => {
+            // Demo of a streaming logs
+            
+            // Code examples go here
+            // link to external resources go here        
+        }
+
+        (&Method::GET, path) if path.starts_with("/error/") => {
+            // Demo of a error-handling functions. Subdirectory paths likely needed
+            
+            // Code examples go here
+            // link to external resources go here        
+        }
+
+        (&Method::GET, path) if path.starts_with("/http/") => {
+            // Demo of a http functions. Subdirectory paths likely needed
+            
+            // Code examples go here
+            // link to external resources go here        
+        }
+
+        (&Method::GET, path) if path.starts_with("/url/") => {
+            // Demo of a url editiing.
+            
+            // Code examples go here
+            // link to external resources go here        
+        }
+
+        (&Method::POST, path) if path.starts_with("/post/") => {
+            // Demo of a POST method handling.
+            
+            // Code examples go here
+            // link to external resources go here        
+        }
+
         // Catch all other requests and return a 404.
         _ => Ok(Response::builder()
             .status(StatusCode::NOT_FOUND)
